@@ -10,10 +10,27 @@ public class MainClass {
 		System.out.println("Hello world");
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter name");
-		String  str = sc.next();
+		String  name = sc.next();
+		System.out.println("Enter surname");
+		String surname = sc.next();
+		System.out.println("Enter address");
+		String address = sc.next();
+		System.out.println("Enter age");
+		Integer age = sc.nextInt();
 		Util u = new Util();
-		String name = u.nameMetod(str);
-		System.out.println("User name : "+name);
+		String [] info= u.nameMetod(name,surname,address,age);
+		
+		for (int i = 0; i < info.length; i++) {
+			if(i==0)
+			System.out.println("User name : "+info[i]);
+			if(i==1)
+			System.out.println("User surname : "+info[i]);
+			if(i==2)
+			System.out.println("User address : "+info[i]);
+			if(i==3)
+			System.out.println("User age : "+info[i]);
+
+		}
 	}
 
 }
